@@ -11,7 +11,7 @@ const scores = {
 
 const RPS = () => {
   const [computer, setComputer] = useState('✊');
-  const [user, setUser] = useState('🤘');
+  const [user, setUser] = useState('👍');
   const [result, setResult] = useState('');
   const [score, setScore] = useState(0);
   const [btnDisabled, setBtnDisabled] = useState(false);
