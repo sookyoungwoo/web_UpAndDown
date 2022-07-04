@@ -1,13 +1,17 @@
 import Main from './page/main/main';
-import Game from './page/game/game';
-import { Route, Routes } from 'react-router-dom';
+import Game from './page/game_1/game_1';
+import Game2 from './page/game_2/game_2';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 function App() {
   return (
     <div className="App">
-      <Main />
-      <Routes>
-        <Route path='/game' element={<Game />} />
-      </Routes>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Main />} />
+          <Route path='/game_1' element={<Game />} />
+          <Route path='/game_2' element={<Game2 />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

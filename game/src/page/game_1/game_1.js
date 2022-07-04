@@ -1,5 +1,7 @@
 import React,{useState} from 'react'
-import './game.scss';
+import './game_1.scss';
+import Out_button from '../../component/Out_button/Out_button';
+import { Link } from 'react-router-dom';
 
 function Main() {
 const [status, setStatus] = useState('1과 100 사이의 숫자를 맞추세요!');
@@ -39,10 +41,17 @@ function changeAnswer(e){
 }
 
   return (
+    
     <div class="background-card">
+      <div className='Out'>
+          <Link to='/'>
+            <Out_button />
+          </Link>
+      </div>
+      <div className='card'>
       <form onSubmit={returnFunc}>
         <div className='title'>
-          <h1 className='title_h1'>Up and Down</h1>
+          <h1 className='title_h1'>Up And Down</h1>
         </div>
         <div className='ment'>
           <p>{status}</p>
@@ -55,16 +64,17 @@ function changeAnswer(e){
           </div>
           <div className='checkbutton'>
             <span className='check'>
-              <button>확인</button>
+              <button className='button'>확인</button>
             </span>
             <span className='return'>
-              <button onClick={resetFunc}>
+              <button onClick={resetFunc} className='button'>
                 다시하기
               </button>
             </span>
           </div> 
         </div>
       </form>
+      </div>
     </div>
   );
 }

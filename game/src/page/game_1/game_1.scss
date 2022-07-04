@@ -1,9 +1,15 @@
-.background-card{
+.Out{
+    float: right;
+    
+}
+.card{
     text-align: center;
-    padding-top: 30vh;
+    padding-top: 25vh;
+    
     .title{
         .title_h1{
             color: hotpink;
+            font-size: 40px;
         }
     }
     .ment{
@@ -35,6 +41,14 @@
             font-weight: 600;
             background-color: hotpink;
             color: white;
+            
+            
+            &:hover {
+                background-color: white;
+                border: 2px solid hotpink;
+                color: hotpink;
+            }
         }
-    }
+        
+    }    
 }
